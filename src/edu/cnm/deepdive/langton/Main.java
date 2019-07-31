@@ -16,6 +16,7 @@ public class Main extends Application {
   private static final  String WINDOW_TITLE_KEY = "window_title";
 
   private MainController controller;
+
   public static void main(String[] args) {
     launch(args);
   }
@@ -37,7 +38,7 @@ public class Main extends Application {
 
   @Override
   public void stop() throws Exception {
-    // TODO Stop any controllers.
+   controller.stop();
     super.stop();
   }
 }
