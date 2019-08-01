@@ -23,7 +23,7 @@
     fx:id="terrainView"
     GridPane.rowIndex="0"
     GridPane.columnIndex="0"
-    GridPane.columnSpan="3"
+    GridPane.columnSpan="4"
     GridPane.halignment="CENTER"
     GridPane.valignment="CENTER"
     width="600"
@@ -45,6 +45,22 @@
     GridPane.valignment="CENTER"
     value="1"/>
 
+  <Slider
+    fx:id="speedSlider"
+    min="1"
+    max="15"
+    majorTickUnit="1"
+    minorTickCount="0"
+    snapToTicks="true"
+    showTickMarks="true"
+    showTickLabels="false"
+    blockIncrement="1"
+    GridPane.rowIndex="1"
+    GridPane.columnIndex="3"
+    GridPane.halignment="CENTER"
+    GridPane.valignment="CENTER"
+    value="1"/>
+
   <ToggleButton
     fx:id="runToggle"
     GridPane.rowIndex="1"
@@ -53,5 +69,15 @@
     GridPane.valignment="CENTER"
     text="%start_text"
     onAction="#toggleRun"/>
+
+  <ToggleButton
+    fx:id="resetToggle"
+    GridPane.rowIndex="1"
+    GridPane.columnIndex="2"
+    GridPane.halignment="CENTER"
+    GridPane.valignment="CENTER"
+    text="%reset_text"
+    onAction="#toggleReset"/>
+
 
 </GridPane>

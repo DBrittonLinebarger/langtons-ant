@@ -15,6 +15,8 @@ public class MainController {
   @FXML private TerrainView terrainView;
   @FXML private ToggleButton runToggle;
   @FXML private Slider populationSize;
+  @FXML private Slider speedSlider;
+  @FXML private ToggleButton resetToggle;
   private boolean running;
   private Terrain terrain;
   private AnimationTimer timer;
@@ -50,6 +52,17 @@ public class MainController {
     running = false;
     timer.stop();
   }
+
+  public void toggleReset(ActionEvent actionEvent) {
+    if (resetToggle.isSelected()) {
+      start();
+    } else {
+      stop();
+    }
+  }
+
+
+
 
   private class Runner extends Thread {
 
