@@ -5,13 +5,10 @@ import java.util.Map;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import sun.awt.resources.awt;
 
 public class TerrainView extends Canvas {
 
   private Map<Integer, Color> colors = new HashMap<>();
-
 
   public void draw(int[][] patches) {
     GraphicsContext context = getGraphicsContext2D();
@@ -21,9 +18,7 @@ public class TerrainView extends Canvas {
     for (int i = 0; i < patches.length; i++) {
       for (int j = 0; j < patches[i].length; j++) {
         if (patches[i][j] != 0) {
-
           context.setFill(getColor(patches[i][j]));
-
           context.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
         }
       }

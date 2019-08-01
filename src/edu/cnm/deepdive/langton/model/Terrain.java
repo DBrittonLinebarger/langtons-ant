@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Terrain {
 
-  private static final int  WORLD_SIZE = 200;
+  private static final int WORLD_SIZE = 200;
 
   private int[][] patches;
   private Ant[] ants;
@@ -51,13 +51,14 @@ public class Terrain {
       if (patches[row][column] == 0) {
         patches[row][column] = id;
         orientation = orientation.rightTurn();
-      }else {
+      } else {
         patches[row][column] = 0;
         orientation = orientation.leftTurn();
       }
-      row = Math.floorMod(row + orientation.getRowOffset(), WORLD_SIZE);
-      column = Math.floorMod(column + orientation.getColumnOffset(), WORLD_SIZE);
+      row = Math.floorMod(row + orientation.getRowOffset(), patches.length);
+      column = Math.floorMod(column + orientation.getColumnOffset(), patches[row].length);
     }
+
   }
 
   public enum Orientation {
