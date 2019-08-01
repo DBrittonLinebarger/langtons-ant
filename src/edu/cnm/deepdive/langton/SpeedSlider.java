@@ -12,8 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class SpeedSlider extends Application {
-
-
+  
   public void start(Stage stage)
   {
 
